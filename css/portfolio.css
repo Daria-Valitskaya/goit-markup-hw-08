@@ -41,6 +41,8 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 button {
@@ -61,31 +63,31 @@ button {
 }
 
 @media screen and (min-width: 480px) {
-  .container .container {
+  .container {
     width: 480px;
     margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .container .container {
+  .container {
     width: 768px;
   }
-  .container .navigation {
+  .navigation {
     display: flex;
     align-items: center;
   }
-  .container .navigation-list {
+  .navigation-list {
     display: flex;
     align-items: center;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .container .container {
+  .container {
     width: 1200px;
   }
-  .container .contacts {
+  .contacts {
     display: flex;
     align-items: center;
     margin-left: auto;

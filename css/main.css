@@ -41,6 +41,8 @@ ul {
 
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 button {
@@ -61,31 +63,31 @@ button {
 }
 
 @media screen and (min-width: 480px) {
-  .container .container {
+  .container {
     width: 480px;
     margin: 0 auto;
   }
 }
 
 @media screen and (min-width: 768px) {
-  .container .container {
+  .container {
     width: 768px;
   }
-  .container .navigation {
+  .navigation {
     display: flex;
     align-items: center;
   }
-  .container .navigation-list {
+  .navigation-list {
     display: flex;
     align-items: center;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .container .container {
+  .container {
     width: 1200px;
   }
-  .container .contacts {
+  .contacts {
     display: flex;
     align-items: center;
     margin-left: auto;
@@ -695,11 +697,18 @@ label > a {
   }
 }
 
+.team-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
 .team-container {
   padding-top: 30px;
   padding-bottom: 30px;
   text-align: center;
   background: #ffffff;
+  border-radius: 0px 0px 4px 4px;
 }
 
 .team-name {
@@ -719,8 +728,21 @@ label > a {
 }
 
 .team-item {
+  margin-bottom: 30px;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 0px 0px 4px 4px;
+}
+
+@media screen and (min-width: 768px) {
+  .team-item:nth-last-child(-n + 2) {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .team-item {
+    margin-bottom: 0px;
+  }
 }
 
 .clients {
