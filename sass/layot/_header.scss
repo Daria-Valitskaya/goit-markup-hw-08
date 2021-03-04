@@ -67,19 +67,9 @@
 //   color: $logo-second-part;
 // }
 
-// .logo-footer {
-//   margin-bottom: 20px;
-
-//   font-family: $logo-font;
-//   color: $button-text-color;
-//   font-weight: 700;
-//   font-size: 26px;
-//   line-height: 1.192;
-//   letter-spacing: 0.03em;
-// }
-// .logo-first-part {
-//   color: $focus-color;
-// }
+.logo-first-part {
+  color: $focus-color;
+}
 
 // .navigation-link {
 //   position: relative;
@@ -132,42 +122,42 @@
 // .contacts-item:not(:first-child) {
 //   margin-left: 50px;
 // }
-// .mail-link {
-//   display: flex;
-//   align-items: center;
-//   @include paddings-t-b(32px);
+.mail-link {
+  display: flex;
+  align-items: center;
+  @include paddings-t-b(32px);
 
-//   letter-spacing: 0.02em;
-//   color: $text-color;
+  letter-spacing: 0.02em;
+  color: $text-color;
 
-//   transition-property: color;
-//   transition-duration: $transition-duration;
-//   transition-timing-function: $timing-function;
-//   &:hover,
-//   &:focus {
-//     color: $focus-color;
-//   }
-// }
+  transition-property: color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
+  &:hover,
+  &:focus {
+    color: $focus-color;
+  }
+}
 
-// .tel-link {
-//   display: flex;
-//   align-items: center;
-//   @include paddings-t-b(32px);
+.tel-link {
+  display: flex;
+  align-items: center;
+  @include paddings-t-b(32px);
 
-//   letter-spacing: 0.02em;
-//   color: $text-color;
+  letter-spacing: 0.02em;
+  color: $text-color;
 
-//   transition-property: color;
-//   transition-duration: $transition-duration;
-//   transition-timing-function: $timing-function;
+  transition-property: color;
+  transition-duration: $transition-duration;
+  transition-timing-function: $timing-function;
 
-//   &:hover,
-//   &:focus {
-//     color: $focus-color;
-//   }
-// }
-// .icon-mail,
-// .icon-tel {
-//   margin-right: 10px;
-//   fill: currentColor;
-// }
+  &:hover,
+  &:focus {
+    color: $focus-color;
+  }
+}
+.icon-mail,
+.icon-tel {
+  margin-right: 10px;
+  fill: currentColor;
+}

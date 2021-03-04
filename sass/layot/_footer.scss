@@ -2,13 +2,41 @@
   @include paddings-t-b(60px);
   background: $dark-background-color;
 }
+.flex-footer {
+  text-align: center;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+}
 
+.logo-footer {
+  margin-bottom: 20px;
+  font-family: $logo-font;
+  color: $button-text-color;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1.167;
+  @media screen and (min-width: 1200px) {
+    font-size: 26px;
+    line-height: 1.192;
+  }
+}
+
+.address {
+  margin-bottom: 8px;
+}
 .address-map {
   font-style: normal;
   font-weight: 400;
   line-height: 1.714;
   color: $button-text-color;
 }
+.contact-flex-footer {
+  margin-bottom: 60px;
+}
+
 .contacts-footer {
   font-weight: 400;
   line-height: 1.714;
@@ -18,49 +46,35 @@
     margin-right: auto;
   }
   & .contacts-item:not(:last-child) {
-    margin-bottom: 10px;
+    margin-bottom: 8px;
   }
 
   & .mail-link,
   & .tel-link {
+    justify-content: center;
     padding: 0 0;
   }
 }
 
-.address {
-  margin-bottom: 10px;
-  margin-right: auto;
+.follow-footer {
+  margin-bottom: 60px;
 }
-
 .follow {
   margin-bottom: 20px;
   font-weight: 700;
   text-transform: uppercase;
   color: $button-text-color;
 }
+// @media screen and (min-width: 768px) {
+//   .follow-form-wrapper {
+//     margin: 0 159px;
+//   }
+// }
 
-.flex-footer {
-  display: flex;
-  align-items: baseline;
-}
-.contact-flex-footer {
-  margin-right: 70px;
-  width: 230px;
-}
-
-.follow-footer {
-  width: 206px;
-  margin-right: 94px;
-}
-
-.follow-form-wrapper {
-  display: flex;
-  margin-top: 20px;
-}
 .follow-mail {
-  margin-right: 11px;
+  margin-bottom: 20px;
   padding-left: 16px;
-  width: 360px;
+  width: 100%;
   height: 50px;
   color: $button-text-color;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -84,7 +98,9 @@
   justify-content: center;
   align-items: center;
 
-  min-width: 200px;
+  width: 200px;
+  @include paddings-t-b(10px);
+  margin: 0 auto;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
