@@ -1,9 +1,8 @@
 .team {
+  background-color: $button-backgroung-color;
   @include paddings-t-b(60px);
-}
 
-@media screen and (min-width: 1200px) {
-  .team {
+  @media screen and (min-width: 1200px) {
     @include paddings-t-b(94px);
   }
 }

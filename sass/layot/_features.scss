@@ -1,15 +1,29 @@
 .features {
-  padding: 94px 0;
+  @include paddings-t-b(60px);
+  @media screen and (min-width: 1200px) {
+    @include paddings-t-b(94px);
+  }
 }
 
 .features-list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .features-item {
-  width: 270px;
-  &:not(:last-child) {
-    margin-right: 30px;
+  max-width: 450px;
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 768px) {
+    max-width: 354px;
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0px;
+    }
+  }
+  @media screen and (min-width: 1200px) {
+    max-width: 270px;
+    margin-bottom: 0px;
   }
 }
 
@@ -25,10 +39,12 @@
 
 .features-subtitle {
   margin-bottom: 10px;
-
   font-weight: 700;
   text-transform: uppercase;
   color: $title-color;
+  @media screen and (max-width: 767px) {
+    text-align: center;
+  }
 }
 
 .features-description {
