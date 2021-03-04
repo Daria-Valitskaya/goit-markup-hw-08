@@ -15,7 +15,7 @@
 
 </head>
 <body>
-    <header class="header">
+    <!-- <header class="header">
         <div class="container">
         <nav class="navigation">
         <a class="logo" href="/"><span class="logo-first-part">Web</span>Studio</a>
@@ -31,6 +31,11 @@
             </li>
         </ul>
         </nav>
+        <button class="burger-btn" type="button" data-menu-button>
+            <svg class="bugrer-btn" width="40" height="40">
+                <use href="./image/icons/opticons.svg#icon-menu-mob"></use>
+            </svg>
+        </button>
             <ul class="contacts">
            <li class="contacts-item">
                <a class="mail-link" href="mailto:info@devstudio.com">
@@ -46,19 +51,72 @@
                 </li>
         </ul>
         </div>
-    </header>
+        <div class="mobile-menu" data-menu>
+            <button class="mobile-close-btn" type="button" data-menu-close>
+                <svg class="bugrer-btn" width="40" height="40">
+                    <use href="./image/icons/opticons.svg#icon-close-mob"></use>
+                </svg>
+                </button>
+            <ul class="mobile-menu-nav">
+                <li class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link current">Студия</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="./portfolio.html" class="mobile-menu-link">Портфолио</a>
+                </li>
+                <li class="mobile-menu-item">
+                    <a href="#" class="mobile-menu-link">Контакты</a>
+                </li>
+            </ul>
+            <ul class="mobile-contacts">
+                <li class="mobile-contacts-item">
+                    <a class="mobile-mail-link" href="mailto:info@devstudio.com">
+                       info@devstudio.com
+                    </a>
+                </li>
+                <li class="mobile-contacts-item">
+                    <a class="mobile-tel-link" href="tel:+380961111111">
+                        +38 096 111 11 11
+                    </a>
+                </li>
+            </ul>
+            <ul class="mobile-social-link-list">
+                <li class="mobile-social-link-item">
+                    <a href="" class="mobile-social-link-link">
+                        Instagram
+                    </a>
+                </li>
+                <li class="mobile-social-link-item">
+                    <a href="" class="mobile-social-link-link">
+                    Twitter
+                    </a>
+                </li>
+                <li class="mobile-social-link-item">
+                    <a href="" class="mobile-social-link-link">
+                    Facebook
+                    </a>
+                </li>
+                <li class="mobile-social-link-item">
+                    <a href="" class="mobile-social-link-link">
+                    LinkedIn
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </header> -->
     <main>
 <!--Hero-->
-<section class="hero overlay">
+<!-- <section class="hero overlay">
     <div class="container">
         <div class="hero-title">
 <h1 class="main-title">Эффективные решения для вашего бизнеса</h1>
 <button class="order-button" type="button" data-modal-open>Заказать услугу</button>
         </div>
 </div>
-</section>
+</section> -->
 <!--features-->
-<section class="features">
+<!-- <section class="features">
     <div class="container">
     <h2 class="features-title vissualy-hidden">наши преимущества</h2>
     <ul class="features-list">
@@ -100,9 +158,9 @@
         </li>
     </ul>
     </div>
-</section>
+</section> -->
 <!--about us-->
-<section class="about-us">
+<!-- <section class="about-us">
     <div class="container">
 <h2 class="about-us-title">Чем мы занимаемся</h2>
 <ul class="about-us-list">
@@ -133,14 +191,48 @@
     </li>
 </ul>
 </div>
-</section>
+</section> -->
 <!--our team-->
 <section class="team">
     <div class="container">
     <h2 class="team-title">Наша команда</h2>
     <ul class="team-list">
         <li class="team-item">
-            <img class="team-img" src="./image/igor-min.jpg" alt="Игорь Демьяненко" width="270" height="260">
+              <picture>
+
+                <source 
+                srcset="./image/studio/our-team/optima-our-team/igor-desktop.webp 1x, 
+                ./image/studio/our-team/optima-out-team/igor-desktop@2x.webp 2x"
+                media="(min-width:1200px)" type="image/webp">
+
+                <source
+                srcset="./image/studio/our-team/optima-out-team/igor-desktop.jpg 1x, 
+                ./image/studio/our-team/optima-out-team/igor-desktop@2x.jpg 2x"
+                media="(min-width:1200px)">
+
+                <source
+                 srcset="./image/studio/our-team/optima-out-team/igor-tablet.webp 1x, 
+                 ./image/studio/our-team/optima-out-team/igor-tablet@2x.webp 2x"
+                 media="(min-width:768px)" type="image/webp">
+
+                <source
+                 srcset="./image/studio/our-team/optima-out-team/igor-tablet.jpg 1x, 
+                 ./image/studio/our-team/optima-out-team/igor-tablet@2x.jpg 2x"
+                 media="(min-width:768px)">
+
+                <source
+                    srcset="./image/studio/our-team/optima-out-team/igor-mob.webp 1x, 
+                    ./image/studio/our-team/optima-out-team/igor-mob@2x.webp 2x"
+                    media="(min-width:320px)" type="image/webp">
+
+                <source
+                    srcset="./image/studio/our-team/optima-out-team/igor-mob.jpg 1x, 
+                    ./image/studio/our-team/optima-out-team/igor-mob@2x.jpg 2x"
+                    media="(min-width:320px)">
+
+             <img class="team-img" src="./image/studio/our-team/optima-our-team/igor-mob.jpg" alt="Игорь Демьяненко">
+             </picture>
+
             <div class="team-container">
                <h3 class="team-name">Игорь Демьяненко</h3>
                <p class="team-position">Product Designer</p>
@@ -346,10 +438,10 @@
 
 </section>
 
-    </main>
+    <!-- </main> -->
     <footer class="footer">
         <div class="container">
-        <!--contacts-->
+        <!--contacts -->
         <div class="flex-footer">
         <div class="contact-flex-footer">
     <a class="logo-footer" href="/"><span class="logo-first-part">Web</span>Studio</a>
@@ -473,6 +565,7 @@
     </div>
 </div>
 <script src="./js/modal.js"></script>
+<script src="./js/mobile-menu.js"></script>
 
 </body>
 </html>
