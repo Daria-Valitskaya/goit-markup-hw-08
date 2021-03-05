@@ -461,14 +461,6 @@ label > a {
   text-align: center;
 }
 
-@media screen and (min-width: 768px) {
-  .flex-footer {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-  }
-}
-
 .logo-footer {
   margin-bottom: 20px;
   font-family: "Raleway", sans-serif;
@@ -496,10 +488,6 @@ label > a {
   color: #ffffff;
 }
 
-.contact-flex-footer {
-  margin-bottom: 60px;
-}
-
 .contacts-footer {
   font-weight: 400;
   line-height: 1.714;
@@ -521,8 +509,11 @@ label > a {
   padding: 0 0;
 }
 
-.follow-footer {
-  margin-bottom: 60px;
+@media screen and (max-width: 1199px) {
+  .follow-footer,
+  .contact-flex-footer {
+    margin-bottom: 60px;
+  }
 }
 
 .follow {
@@ -533,15 +524,21 @@ label > a {
 }
 
 .follow-mail {
-  margin-bottom: 20px;
   padding-left: 16px;
   width: 100%;
+  max-width: 450px;
   height: 50px;
   color: #ffffff;
   border: 1px solid rgba(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: #2f303a;
+}
+
+@media screen and (max-width: 1199px) {
+  .follow-mail {
+    margin-bottom: 20px;
+  }
 }
 
 .follow-mail:focus {
@@ -937,7 +934,7 @@ label > a {
   flex-wrap: wrap;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 1199px) {
   .client-list {
     margin: -15px;
   }
