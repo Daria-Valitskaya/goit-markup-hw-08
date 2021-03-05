@@ -1,9 +1,75 @@
+%flexfooter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .footer {
   @include paddings-t-b(60px);
   background: $dark-background-color;
 }
+
 .flex-footer {
-  text-align: center;
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+}
+
+.contact-flex-footer {
+  @extend %flexfooter;
+  flex-direction: column;
+  margin-bottom: 60px;
+
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    margin-right: 166px;
+  }
+  @media screen and (min-width: 1200px) {
+    align-items: flex-start;
+    margin-bottom: 0px;
+  }
+}
+
+.follow-footer {
+  @extend %flexfooter;
+  flex-direction: column;
+  margin-bottom: 60px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    justify-content: flex-start;
+  }
+  @media screen and (min-width: 1200px) {
+    align-items: flex-start;
+    margin-bottom: 0px;
+  }
+}
+.follow-form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  @media screen and (min-width: 1200px) {
+    align-items: flex-start;
+  }
+}
+
+.follow-form-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
+  }
 }
 
 .logo-footer {
@@ -11,50 +77,46 @@
   font-family: $logo-font;
   color: $button-text-color;
   font-weight: 700;
+
   font-size: 24px;
-  line-height: 1.167;
+  line-height: 1, 167;
   @media screen and (min-width: 1200px) {
     font-size: 26px;
     line-height: 1.192;
   }
 }
-
-.address {
-  margin-bottom: 8px;
+.logo-first-part {
+  color: $focus-color;
 }
+
 .address-map {
   font-style: normal;
   font-weight: 400;
   line-height: 1.714;
   color: $button-text-color;
 }
+.address {
+  margin-bottom: 10px;
+}
 
 .contacts-footer {
   font-weight: 400;
   line-height: 1.714;
   color: $button-alfa-text;
-  & .contacts-item {
-    margin-left: 0;
-    margin-right: auto;
-  }
+
   & .contacts-item:not(:last-child) {
-    margin-bottom: 8px;
+    margin-bottom: 10px;
   }
 
   & .mail-link,
   & .tel-link {
-    justify-content: center;
     padding: 0 0;
   }
 }
 
-@media screen and (max-width: 1199px) {
-  .follow-footer,
-  .contact-flex-footer {
-    margin-bottom: 60px;
-  }
-}
 .follow {
+  display: flex;
+  justify-content: center;
   margin-bottom: 20px;
   font-weight: 700;
   text-transform: uppercase;
@@ -62,6 +124,7 @@
 }
 
 .follow-mail {
+  margin-bottom: 10px;
   padding-left: 16px;
   width: 100%;
   max-width: 450px;
@@ -71,9 +134,6 @@
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   background-color: $dark-background-color;
-  @media screen and (max-width: 1199px) {
-    margin-bottom: 20px;
-  }
 
   &:focus {
     outline: none;
@@ -84,16 +144,20 @@
     line-height: 1.25;
     color: rgba(255, 255, 255, 0.6);
   }
+  @media screen and (min-width: 768px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 360px;
+    margin-right: 10px;
+    margin-bottom: 0px;
+  }
 }
 
 .follow-btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  width: 200px;
+  @extend %flexfooter;
   @include paddings-t-b(10px);
-  margin: 0 auto;
+  width: 200px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.875;
@@ -112,100 +176,3 @@
     background-color: $order-button-color;
   }
 }
-
-// old footer
-
-// .contacts-footer {
-//   font-weight: 400;
-//   line-height: 1.714;
-//   color: $button-alfa-text;
-//   & .contacts-item {
-//     margin-left: 0;
-//     margin-right: auto;
-//   }
-//   & .contacts-item:not(:last-child) {
-//     margin-bottom: 10px;
-//   }
-
-//   & .mail-link,
-//   & .tel-link {
-//     padding: 0 0;
-//   }
-// }
-
-// .address {
-//   margin-bottom: 10px;
-//   margin-right: auto;
-// }
-
-// .follow {
-//   margin-bottom: 20px;
-//   font-weight: 700;
-//   text-transform: uppercase;
-//   color: $button-text-color;
-// }
-
-// .flex-footer {
-//   display: flex;
-//   align-items: baseline;
-// }
-// .contact-flex-footer {
-//   margin-right: 70px;
-//   width: 230px;
-// }
-
-// .follow-footer {
-//   width: 206px;
-//   margin-right: 94px;
-// }
-
-// .follow-form-wrapper {
-//   display: flex;
-//   margin-top: 20px;
-// }
-// .follow-mail {
-//   margin-right: 11px;
-//   padding-left: 16px;
-//   width: 360px;
-//   height: 50px;
-//   color: $button-text-color;
-//   border: 1px solid rgba(255, 255, 255, 0.3);
-//   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
-//   border-radius: 4px;
-//   background-color: $dark-background-color;
-
-//   &:focus {
-//     outline: none;
-//   }
-//   &::placeholder {
-//     font-weight: 400;
-//     font-size: 16px;
-//     line-height: 1.25;
-//     color: rgba(255, 255, 255, 0.6);
-//   }
-// }
-
-// .follow-btn {
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-
-//   min-width: 200px;
-//   font-weight: 700;
-//   font-size: 16px;
-//   line-height: 1.875;
-//   letter-spacing: 0.06em;
-//   color: $button-text-color;
-//   background-color: $focus-color;
-//   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-//   border-radius: 4px;
-
-//   transition-property: background-color;
-//   transition-duration: $transition-duration;
-//   transition-timing-function: $timing-function;
-
-//   &:hover,
-//   &:focus {
-//     background-color: $order-button-color;
-//   }
-// }
