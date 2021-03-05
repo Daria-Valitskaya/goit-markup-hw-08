@@ -1,11 +1,25 @@
 .portfolio {
-  @include paddings-t-b(94px);
+  @include paddings-t-b(60px);
+
+  @media screen and (min-width: 1200px) {
+    @include paddings-t-b(94px);
+  }
 }
+
 .portfolio-button-list {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
 
-  margin-bottom: 50px;
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+    margin-bottom: 50px;
+  }
 }
 
 .portfolio-button {
@@ -35,4 +49,9 @@
 
 .portfolio-button-item:not(:last-child) {
   margin-right: 10px;
+}
+@media screen and (max-width: 767px) {
+  .portfolio-button-item:not(:nth-last-child(-n-2)) {
+    margin-bottom: 15px;
+  }
 }
