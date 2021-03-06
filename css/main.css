@@ -841,7 +841,7 @@ label > a {
 
 .overlay {
   background-color: #c4c4c4;
-  max-width: 1600px;
+  max-width: 480px;
   height: 400px;
   margin-right: auto;
   margin-left: auto;
@@ -853,24 +853,28 @@ label > a {
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 320px), screen and (min-resolution: 192dpi) and (min-width: 320px), screen and (min-resolution: 2dppx) and (min-width: 320px) {
   .overlay {
+    max-width: 480px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/studio/hero/optima-hero/hero-mobile@2x.jpg");
   }
 }
 
 @media screen and (min-width: 768px) {
   .overlay {
+    max-width: 1600px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/studio/hero/optima-hero/hero-tablet.jpg");
   }
 }
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 768px), screen and (min-resolution: 192dpi) and (min-width: 768px), screen and (min-resolution: 2dppx) and (min-width: 768px) {
   .overlay {
+    max-width: 1600px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/studio/hero/optima-hero/hero-tablet@2x.jpg");
   }
 }
 
 @media screen and (min-width: 1200px) {
   .overlay {
+    max-width: 1600px;
     height: 600px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/studio/hero/optima-hero/hero-desktop.jpg");
   }
@@ -878,6 +882,7 @@ label > a {
 
 @media screen and (min-device-pixel-ratio: 2) and (min-width: 1200px), screen and (min-resolution: 192dpi) and (min-width: 1200px), screen and (min-resolution: 2dppx) and (min-width: 1200px) {
   .overlay {
+    max-width: 1600px;
     height: 600px;
     background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url("../image/studio/hero/optima-hero/hero-desktop@2x.jpg");
   }
